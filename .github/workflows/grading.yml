@@ -25,6 +25,15 @@ jobs:
     - name: Setup VSTest and add to PATH
       uses: darenm/Setup-VSTest@v1
       id: setup_vstest
+      
+    - name: Run tests
+      id: debug
+      shell: bash # test runner uses git bash shell in windows
+      run: |
+        ls
+        ls packages
+
+   
 
     - name: Run tests
       id: run-tests
